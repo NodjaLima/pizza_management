@@ -1,0 +1,20 @@
+.div-card-colaboradores{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin: 100px auto;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.div-card-colaboradores .card-colaborador{
+    text-align: center;
+    max-width: 500px;
+    word-wrap: break-word;
+    height: 600px;
+}
+
+.div-card-colaboradores .card-colaborador h3{
+    margin-bottom: 20px;
+    font-size: 30pt;
+}
