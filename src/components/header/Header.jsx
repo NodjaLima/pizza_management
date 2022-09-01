@@ -9,7 +9,7 @@ export default function Header() {
     return (
       <div className= "navbar">
         <div className="logo">
-            
+            <img src="/src/assets/img/logopizza.png"></img>
         </div>
         <div className="links-menu">  
             <div className="link" onClick={() => navegate("/home")}>
