@@ -17,10 +17,6 @@ const InserirCardapio = () => {
       tamanho_cardapio : tamanho,
       valor_cardapio : preco
   })
-
-  
-
-  console.log(categoria)
   }
 
   return ( 

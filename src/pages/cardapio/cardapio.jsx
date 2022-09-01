@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import DeletaCardapio from '../../components/deletar_cardapio/deletar_cardapio';
 import InserirCardapio from '../../components/inserir_cardapio/inserir_cardapio';
 import ListaCardapio from "../../components/lista_cardapio/lista_cardapio";
 
@@ -41,6 +42,7 @@ const Cardapio = () => {
 
       {mostraCardapio && <ListaCardapio />}
       {inserirCardapio && <InserirCardapio />}
+      {deletarCardapio && <DeletaCardapio />}
 
 
     </div>
