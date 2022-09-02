@@ -1,0 +1,11 @@
+.cardapio-container{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 45% 45%;
+}
+
+.cardapio-inserir{
+  display: flex;
+  flex-direction: column;
+}
+
