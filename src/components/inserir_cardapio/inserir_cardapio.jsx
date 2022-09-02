@@ -1,5 +1,6 @@
-import axios from "axios";
 import { useState } from 'react';
+import { PostCardapio } from '../../services/requisicoes_cardapio'
+
 import './inserir_cardapio.css'
 
 const InserirCardapio = () => {
@@ -11,19 +12,13 @@ const InserirCardapio = () => {
   const [preco, setPreco] = useState();
   const [mostra, setMostra] = useState(true)
 
-
-  const post = async () => {
-    await axios.post('https://restaurante-api-m4.herokuapp.com/cardapio/novo', {
-      categoria_cardapio : categoria,
-      sabor_cardapio : sabor,
-      ingredientes_cardapio : ingredientes,
-      tamanho_cardapio : tamanho,
-      valor_cardapio : preco
-  }).then((response) => {
-    setMostra(false)
-  }).catch((e)=>{
-    alert("Não foi possível inserir o novo item. Verifica as informações do cadastro e tente novamente")
-  })
+  const post = () => {
+    const send = PostCardapio(categoria, sabor, ingredientes,tamanho, preco)
+    .then((response) => {
+      setMostra(false)
+    }).catch((e) => {
+      alert('Não foi possível cadastrar o item. Verifique os dados e tente novamente.')
+    })
   }
 
   return ( 
