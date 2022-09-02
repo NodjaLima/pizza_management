@@ -26,8 +26,12 @@ const EditaCardapio = () => {
       ingredientes_cardapio : ingredientes,
       tamanho_cardapio : tamanho,
       valor_cardapio : preco
+  }).then((response)=> {
+    alert('Registro deletado com sucesso')
+    setMostra(true)
+  }).catch((e) => {
+    alert('Não foi possível alterar o registro. Verifique os campos.')
   })
-    console.log(cardapio)
   }
 
   return ( 
