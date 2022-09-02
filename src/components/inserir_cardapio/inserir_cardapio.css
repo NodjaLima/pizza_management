@@ -1,0 +1,17 @@
+.post-cardapio{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50vw;
+  align-items: center;
+  padding: 20px;
+}
+
+.Cadatrar_btn{
+  width: 30%;
+}
+
+.inserir_inp{
+  width: 70%;
+}
+

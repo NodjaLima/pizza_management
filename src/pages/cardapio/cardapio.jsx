@@ -4,6 +4,8 @@ import EditaCardapio from '../../components/editar_cardapio/editar_cardapio';
 import InserirCardapio from '../../components/inserir_cardapio/inserir_cardapio';
 import ListaCardapio from "../../components/lista_cardapio/lista_cardapio";
 
+import './cardapio.css'
+
 const Cardapio = () => {
   const [mostraCardapio, setMostraCardapio] = useState(false)
   const [editarCardapio, setEditarCardapio] = useState(false)
@@ -15,6 +17,8 @@ const Cardapio = () => {
     <div className="cardapio-container">
       
       <h1>GERENCIE O SEU CARDÁPIO</h1>
+
+      <div className='cardapio-botoes'>
       <button onClick={()=>{
         setMostraCardapio(true)
         setEditarCardapio(false)
@@ -39,13 +43,12 @@ const Cardapio = () => {
         setInserirCardapio(false)
         setDeletarCardapio(true)}
         }>Deletar</button>
+      </div>
       
-
       {mostraCardapio && <ListaCardapio />}
       {inserirCardapio && <InserirCardapio />}
       {deletarCardapio && <DeletaCardapio />}
       {editarCardapio && <EditaCardapio />}
-
 
     </div>
     

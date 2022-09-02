@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from 'react';
+import './inserir_cardapio.css'
 
 const InserirCardapio = () => {
 
@@ -21,12 +22,12 @@ const InserirCardapio = () => {
 
   return ( 
     <div className="post-cardapio">
-      <input type='text' placeholder="Categoria" onBlur={(e) => {setCategoria(e.target.value)}}/>
-      <input type='text' placeholder="Sabor" onBlur={(e) => {setSabor(e.target.value)}}/>
-      <input type='text' placeholder="Ingredientes" onBlur={(e) => {setIngredientes(e.target.value)}}/>
-      <input type='text' placeholder="Tamanho" onBlur={(e) => {setTamanho(e.target.value)}}/>
-      <input type='text' placeholder="Preço" onBlur={(e) => {setPreco(e.target.value)}}/>
-      <button onClick={post}>Cadastrar Item</button>
+      <input className="inserir_inp" type='text' placeholder="Categoria" onBlur={(e) => {setCategoria(e.target.value)}}/>
+      <input className="inserir_inp" type='text' placeholder="Sabor" onBlur={(e) => {setSabor(e.target.value)}}/>
+      <input className="inserir_inp" type='text' placeholder="Ingredientes" onBlur={(e) => {setIngredientes(e.target.value)}}/>
+      <input className="inserir_inp" type='text' placeholder="Tamanho" onBlur={(e) => {setTamanho(e.target.value)}}/>
+      <input className="inserir_inp" type='text' placeholder="Preço" onBlur={(e) => {setPreco(e.target.value)}}/>
+      <button className="Cadatrar_btn" onClick={post}>Cadastrar Item</button>
     </div>
    );
 }
