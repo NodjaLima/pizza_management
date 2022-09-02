@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import ItemCardapio from '../item_cardapio/item_cardapio'
 
+import './editar_cardapio.css'
+
 const EditaCardapio = () => {
 
   const [cardapio, setCardapio] = useState([])
@@ -27,7 +29,7 @@ const EditaCardapio = () => {
       tamanho_cardapio : tamanho,
       valor_cardapio : preco
   }).then((response)=> {
-    alert('Registro deletado com sucesso')
+    alert('Registro editado com sucesso')
     setMostra(true)
   }).catch((e) => {
     alert('Não foi possível alterar o registro. Verifique os campos.')
@@ -50,13 +52,13 @@ const EditaCardapio = () => {
         })
       }
       {!mostra && 
-        <div className="post-cardapio">
-        <input type='text' placeholder="Categoria" onBlur={(e) => {setCategoria(e.target.value)}}/>
-        <input type='text' placeholder="Sabor" onBlur={(e) => {setSabor(e.target.value)}}/>
-        <input type='text' placeholder="Ingredientes" onBlur={(e) => {setIngredientes(e.target.value)}}/>
-        <input type='text' placeholder="Tamanho" onBlur={(e) => {setTamanho(e.target.value)}}/>
-        <input type='text' placeholder="Preço" onBlur={(e) => {setPreco(e.target.value)}}/>
-        <button onClick={async () => await Edit(id)}>Salvar Alterações</button>
+        <div className="put-cardapio">
+        <input className="editar_inp" type='text' placeholder="Categoria" onBlur={(e) => {setCategoria(e.target.value)}}/>
+        <input className="editar_inp" type='text' placeholder="Sabor" onBlur={(e) => {setSabor(e.target.value)}}/>
+        <input className="editar_inp" type='text' placeholder="Ingredientes" onBlur={(e) => {setIngredientes(e.target.value)}}/>
+        <input className="editar_inp" type='text' placeholder="Tamanho" onBlur={(e) => {setTamanho(e.target.value)}}/>
+        <input className="editar_inp" type='text' placeholder="Preço" onBlur={(e) => {setPreco(e.target.value)}}/>
+        <button className="editar_btn"onClick={async () => await Edit(id)}>Salvar Alterações</button>
       </div>
       }
 

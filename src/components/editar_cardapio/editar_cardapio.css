@@ -1,4 +1,4 @@
-.post_cardapio{
+.put-cardapio{
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -7,11 +7,10 @@
   padding: 20px;
 }
 
-.Cadatrar_btn{
+.editar_btn{
   width: 30%;
 }
 
-.inserir_inp{
+.editar_inp{
   width: 70%;
 }
-
