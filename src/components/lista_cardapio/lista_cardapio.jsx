@@ -1,16 +1,21 @@
-import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import ItemCardapio from '../item_cardapio/item_cardapio'
+import { RequisicaoCardapio } from '../../services/requisicoes_cardapio'
 
 const ListaCardapio = () => {
 
   const [cardapio, setCardapio] = useState([])
 
-  useEffect(() => {axios.get('https://restaurante-api-m4.herokuapp.com/cardapio/tudo')
-  .then((response) => setCardapio(response.data))
-  .catch((e) => e.message)}, [])
+  const getCardapio = async () => {
+    const Cardapio = await RequisicaoCardapio()
+    setCardapio(Cardapio)
+  }
 
+  useEffect(() => {
+    getCardapio()
+  }, [])
+  
   
   return ( 
     <div>
