@@ -1,0 +1,91 @@
+.clientes-conteudo{
+
+    margin-top: 80px;
+    border: red solid 1px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    height: auto;
+    width: 80%;   
+    
+}
+
+
+.navbar-cliente{
+
+    width: 150px;
+    min-width: 150px;
+    min-height: 50px;
+    height: 600px;
+    background-color: #01161E;
+    display: flex;
+    flex-direction: row;    
+    font-size: 18px;
+    border: solid red 1px;
+    
+}
+
+.links-menu-cliente{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-family: 'Franklin Gothic Medium Cond';
+    color: #EFF6E0;
+    justify-content: space-around;
+    gap: 5px;
+    text-align: center;
+
+}
+
+
+.link-cliente{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.pagina-view{
+
+    color: white;
+
+    width: 90%;
+
+    min-height: 50px;
+    height: 600px;
+
+    background-color: #bcdae55b;
+    display: flex;
+
+    flex-direction: row;    
+    font-size: 13px;
+
+    border: solid red 1px;
+
+    padding: 5%;
+
+    justify-content: center;
+}
+
+.form-cliente-cadastro{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn-cliente{
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+   
+}
+input {
+    display: block;
+    height: 25px;
+    width: 300px;
+}
