@@ -15,14 +15,17 @@ export default function Header() {
             <div className="link" onClick={() => navegate("/home")}>
                HOME 
             </div>
-            <div className="link" onClick={() => navegate("/sobre")}>
-               SOBRE
+            <div className="link" onClick={() => navegate("/cardapio")}>
+               CARDAPIO
             </div>
-            <div className="link"onClick={() => navegate("/contato")}>
-               CONTATO
+            <div className="link"onClick={() => navegate("/clientes")}>
+               CLIENTES
             </div>
-            <div className="link"onClick={() => navegate("/login")}>
-               LOGIN
+            <div className="link"onClick={() => navegate("/colaboradores")}>
+               COLABORADORES
+            </div>
+            <div className="link"onClick={() => navegate("/fornecedores")}>
+               FORNECEDORES
             </div>
             <div className="hamburguer">
                 <List size={40} />
