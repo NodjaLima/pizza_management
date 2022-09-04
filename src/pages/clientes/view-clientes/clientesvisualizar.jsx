@@ -15,7 +15,7 @@ const Verclientes = () => {
     return (
 
         <div>
-            <h1> Aqui será mostrada a lista de clientes.</h1> <br></br>
+            <h1>Clientes Cadastrados</h1> <br></br>
             {/* <Listadeclientes clientes={clientes}/> */}
             <Tabela clientes={clientes}/>
         </div>
