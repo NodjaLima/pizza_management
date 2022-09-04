@@ -1,5 +1,5 @@
 import React from "react";
-import './tabela.css';
+import '../tabela.css';
 
 
 const Tabela = ({clientes}) => {

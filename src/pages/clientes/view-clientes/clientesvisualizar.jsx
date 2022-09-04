@@ -1,5 +1,5 @@
 import React from "react";
-import Tabela from "../../../components/table/tabelaclientes";
+import Tabela from "../../../components/table/tab-clientes/tabelaclientes"
 import Listadeclientes from "./listadeclientes";
 
 
