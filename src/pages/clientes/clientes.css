@@ -1,7 +1,7 @@
 .clientes-conteudo{
 
     margin-top: 80px;
-    border: red solid 1px;
+    /* border: red solid 1px; */
     display: flex;
     flex-direction: row;
     margin-left: 10%;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;    
     font-size: 18px;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     
 }
 
@@ -31,7 +31,6 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    font-family: 'Franklin Gothic Medium Cond';
     color: #EFF6E0;
     justify-content: space-around;
     gap: 5px;
@@ -39,6 +38,23 @@
 
 }
 
+.links-menu-cliente button{
+
+    background-color: #01161E;
+    border-style: none;    
+    color: #EFF6E0;
+    justify-content: space-around;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+.links-menu-cliente button:hover{
+
+    background-color: #33b2e9;
+    color: #EFF6E0;
+   
+}
 
 .link-cliente{
     height: 100%;
@@ -64,7 +80,7 @@
     flex-direction: row;    
     font-size: 13px;
 
-    border: solid red 1px;
+    /* border: solid red 1px; */
 
     padding: 5%;
 

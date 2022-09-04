@@ -1,6 +1,9 @@
 import React from "react";
-import './clientes.css'
+
+import axios from "axios";
+
 import { useState } from "react";
+import '../../clientes/clientes.css'
 
 
 const valorInicial = {
@@ -28,6 +31,13 @@ const Formcadastro = () =>{
         console.log(values)
     }
 
+    function submit(event){
+        event.preventDefault()
+
+        // axios.post('', values);
+
+    }
+
 
     return (
         
@@ -51,7 +61,7 @@ const Formcadastro = () =>{
                     <input type="text" name='telefone_cliente' onChange={onChange}></input>
                 </label><br></br>
 
-                <button className="btn-cliente">Cadastrar</button>
+                <button className="btn-cliente" type="submit" onClick={() => {submit}}>Cadastrar</button>
 
             </form>
         </div>

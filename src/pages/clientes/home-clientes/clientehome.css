@@ -1,0 +1,16 @@
+.conteudo-clientes-home {
+
+    display: block;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+
+}
+
+p{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 32px;
+}

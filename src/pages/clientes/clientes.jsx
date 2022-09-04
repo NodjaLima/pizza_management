@@ -1,13 +1,26 @@
 import React from 'react'
+// import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+
+
+import Formcadastro from './form-clientes/clientecadastrar';
+import Clientehome from './home-clientes/clientehome';
+import Verclientes from './view-clientes/clientesvisualizar';
+import Atualizarclientes from './att-clientes/clienteatualizar';
+import Deletaclientes from './delete-clientes/clientedeletar';
+
+
+
+
 import './clientes.css'
-import Formcadastro from './clientecadastrar';
-import { useNavigate } from "react-router-dom";
-import { List } from 'phosphor-react';
-import Clientehome from './clientehome';
+
+
 
 export default function Clientes() {
 
-    const navegate = useNavigate();
+    // const navegate = useNavigate();
+
+    const [pagina, setPagina] = useState(<Clientehome/>)  
 
     return (
       <div className='pagina'>
@@ -17,25 +30,27 @@ export default function Clientes() {
                 <div className= "navbar-cliente">
                     <div className="links-menu-cliente">  
 
-                        <div className="link-cliente" onClick={() => navegate("/clientes/cadastrar")}>
+                        <button className="link-cliente" onClick={() => {setPagina(<Formcadastro />)}}>
                         CADASTRAR CLIENTES
-                        </div>
-                        <div className="link-cliente" onClick={() => navegate("/clientes/lista")}>
+                        </button>
+                        <button className="link-cliente" onClick={() => {setPagina(<Verclientes />)}}>
                         VER CLIENTES
-                        </div>
-                        <div className="link-cliente" onClick={() => navegate("/clientes/atualizar")}>
+                        </button>
+                        <button className="link-cliente" onClick={() => {setPagina(<Atualizarclientes />)}}>
                         ATUALIZAR CLIENTES
-                        </div>
-                        <div className="link-cliente" onClick={() => navegate("/clientes/deletar")}>
+                        </button>
+                        <button className="link-cliente" onClick={() => {setPagina(<Deletaclientes />)}}>
                         DELETAR CLIENTES
-                        </div>
+                        </button>
                     </div>
                 </div>
 
                 <div className='pagina-view'>
-                    <Formcadastro/>
-                 </div>
-      </div>  
+                    
+                    {pagina}
+
+                </div>
+            </div>  
       
       </div>  
 
