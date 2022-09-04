@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 
 import { useState } from "react";
+
 import '../../clientes/clientes.css'
 
 
@@ -19,22 +20,24 @@ const valorInicial = {
 const Formcadastro = () =>{
 
     const [values, setValues] = useState(valorInicial);
+    
 
-    function onChange(event) {
-        
+    function onChange(event) {        
         const {name, value} = event.target
-
-        // console.log({name, value})        
-
+        // console.log({name, value})
         setValues({...values, [name]: value});
-
         console.log(values)
     }
 
-    function submit(event){
+    function onSubmit(event){
         event.preventDefault()
+        console.log('Click')
 
-        // axios.post('', values);
+        axios.post('https://restaurante-api-m4.herokuapp.com/clientes', values)
+        .then((response) => {
+            
+            alert('Cliente cadastrado.')
+        });
 
     }
 
@@ -44,7 +47,7 @@ const Formcadastro = () =>{
         <div className="form-cliente-cadastro">
             <h3>Cadastro de clientes</h3><br></br><br></br>
 
-            <form>
+            <form onSubmit={onSubmit}>
                 <label>Nome completo: 
                     <input type="text" name='nome_cliente' onChange={onChange}></input>
                 </label><br></br>
@@ -61,7 +64,7 @@ const Formcadastro = () =>{
                     <input type="text" name='telefone_cliente' onChange={onChange}></input>
                 </label><br></br>
 
-                <button className="btn-cliente" type="submit" onClick={() => {submit}}>Cadastrar</button>
+                <button className="btn-cliente" type="submit">Cadastrar</button>
 
             </form>
         </div>
