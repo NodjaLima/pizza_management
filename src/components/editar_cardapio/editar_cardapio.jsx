@@ -1,7 +1,7 @@
-import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import ItemCardapio from '../item_cardapio/item_cardapio'
+import { RequisicaoCardapio, PutCardapio } from '../../services/requisicoes_cardapio'
 
 import './editar_cardapio.css'
 
@@ -17,25 +17,23 @@ const EditaCardapio = () => {
   const [tamanho, setTamanho] = useState();
   const [preco, setPreco] = useState();
 
-  useEffect(() => {axios.get('https://restaurante-api-m4.herokuapp.com/cardapio/tudo')
-  .then((response) => setCardapio(response.data))
-  .catch((e) => e.message)}, [<button/>])
+  const getCardapio = async () => {
+    const Cardapio = await RequisicaoCardapio()
+    setCardapio(Cardapio)
+  }
+  useEffect(() => {getCardapio()}, [<button/>])
 
-  const Edit = async (id) => {
-    await axios.put(`https://restaurante-api-m4.herokuapp.com/cardapio/${id}`, {
-      categoria_cardapio : categoria,
-      sabor_cardapio : sabor,
-      ingredientes_cardapio : ingredientes,
-      tamanho_cardapio : tamanho,
-      valor_cardapio : preco
-  }).then((response)=> {
-    alert('Registro editado com sucesso')
-    setMostra(true)
-  }).catch((e) => {
-    alert('Não foi possível alterar o registro. Verifique os campos.')
-  })
+  const Edit = (id) => {
+    const put = PutCardapio(id, categoria, sabor, ingredientes,tamanho, preco)
+    .then((response) => {
+      alert('Regostro editado com sucesso')
+      setMostra(true)
+    }).catch((e) => {
+      alert('Não foi possível alterar o registro. Verifique os campos.')
+    })
   }
 
+  
   return ( 
     <div>
       {mostra &&
