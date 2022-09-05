@@ -1,10 +1,11 @@
 .div-card-colaboradores{
     display: grid;
-    grid-template-columns: 300px 300px 300px;
-    margin: 100px auto;
+    grid-template-columns: 300px 300px 300px 300px;
+    margin: 20px auto;
     justify-content: center;
     gap: 50px;
     width: 100%;
+    overflow-y: scroll;
 }
 
 .div-card-colaboradores .card-colaborador{

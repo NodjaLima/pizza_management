@@ -1,0 +1,25 @@
+.lista-menu-container-colaboradores{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 22pt;
+    list-style: none;
+    background-color: #01161E;
+    font-weight: 200;
+    color: unset;
+    transition: 1s;
+}
+
+.lista-menu-container-colaboradores li{
+    padding: 20px;
+    
+}
+
+.lista-menu-container-colaboradores li:hover {
+    background-color: #AEC3B0;
+    transition: 1s;
+}

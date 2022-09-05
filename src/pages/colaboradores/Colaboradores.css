@@ -1,0 +1,12 @@
+.container-main-colaboradores{
+    display: flex;
+    width: 90%;
+    height: 800px;
+    background-color: #AEC3B0;
+    margin: 30px auto;
+    scroll-behavior: smooth;
+}
+
+.nav-container-main-colaboradores{
+    width: 300px;
+}
