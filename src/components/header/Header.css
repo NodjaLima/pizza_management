@@ -1,0 +1,57 @@
+.navbar{
+    width: 100vw;
+    min-height: 50px;
+    max-height: 62px;
+    background-color: #01161E;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 20px 20px;
+    font-size: 17px;
+}
+
+.links-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    font-family: 'Franklin Gothic Medium Cond';
+    color: #EFF6E0;
+    justify-content: space-around;
+    gap: 5px;
+
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex: 2;
+    justify-content: start;
+    align-items: center;
+    margin-left: 80px;
+}
+
+img {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.hamburguer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 28px ;
+    cursor: pointer;
+    border-radius: 25px;
+}
