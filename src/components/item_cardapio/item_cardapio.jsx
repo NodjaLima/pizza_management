@@ -5,6 +5,7 @@ const ItemCardapio = (props) => {
       <p>Ingredientes: {props.ingredientes}</p>
       <p>Tamanho: {props.tamanho}</p>
       <p>Valor: {props.valor}</p>
+      <br />
     </div>
    );
 }

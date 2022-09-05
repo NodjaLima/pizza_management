@@ -15,12 +15,38 @@ const ListaCardapio = () => {
   useEffect(() => {
     getCardapio()
   }, [])
-  
+
+  const pizzaSalgada = cardapio.filter((item) => item.categoria_cardapio === 'Pizza Salgada')
+  const pizzaDoce = cardapio.filter((item) => item.categoria_cardapio === 'Pizza Doce')
+  const bebida = cardapio.filter((item) => item.categoria_cardapio === 'Bebida')
+
   
   return ( 
     <div>
+      <h3>Esse é o seu cardapio</h3>
+      <br />
+      <h2>Pizzas Salgadas</h2>
+      <br />
       {
-        cardapio.map((item) => {
+        pizzaSalgada.map((item) => {
+          return (
+            <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio}/>
+          )
+        })
+      }
+      <h2>Pizzas Doces</h2>
+      <br />
+      {
+        pizzaDoce.map((item) => {
+          return (
+            <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio}/>
+          )
+        })
+      }
+      <h2>Bebidas</h2>
+      <br />
+      {
+        bebida.map((item) => {
           return (
             <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio}/>
           )
