@@ -1,21 +1,26 @@
 import React from "react";
+
 import '../tabela.css';
 
 
-const Tabela = ({clientes}) => {
+const Row = ({ record }) => {
 
-    const Linha = ({linha}) => {
-        const chave = Object.keys(linha)
-        return(
-            <tr key={linha.id}>
-                {
-                    chave.map(key => <td key={chave}>{linha[key]}</td>)                
-                }                
-            </tr>
-        )
-    }
+    const keys = Object.keys(record)
 
-    const atributo = Object.keys(clientes[0])
+    return(
+
+        <tr key={record.id_cliente}>
+            {
+                keys.map((key) => <td key={key}>{record[key]}</td>)
+            }            
+        </tr> 
+    )
+}
+
+
+const Tabela = ({ cliente }) => {
+
+    const keys = Object.keys(cliente[0])
 
     return(
         <div>
@@ -23,14 +28,14 @@ const Tabela = ({clientes}) => {
 
                 <thead>                    
                     <tr>
-                        {atributo.map(chave => <th key={atributo}>{chave}</th> )}                        
+                        {keys.map((key) => <th key={key}>{key}</th>)}
                     </tr>
                 </thead>
 
 
                 
                 <tbody>
-                    {clientes.map(linha => <Linha linha={linha}/>)}
+                    {cliente.map((record) => <Row record={record}/>)}                   
                 </tbody>
 
             </table>

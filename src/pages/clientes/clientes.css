@@ -70,6 +70,7 @@
     color: white;
 
     width: 90%;
+    min-width: auto;
 
     min-height: 50px;
     height: 600px;
