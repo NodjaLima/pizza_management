@@ -3,6 +3,7 @@ import axios from "axios";
 import "./TabelaColaboradores.css";
 import editar from '../../../assets/img/editar-icone50.png'
 import excluir from '../../../assets/img/excluir-icone50.png'
+import { ExcluiColaborador } from "../../../services/requisicoes_colaboradores";
 
 const TabelaColaboradores = (props) => {
   const [info, setInfo] = useState([]);
@@ -47,10 +48,13 @@ const TabelaColaboradores = (props) => {
               <td>{item.turno_colaborador}</td>
               <td id="td-sal">{item.salario_colaborador}</td>
               <td>{item.admissao_colaborador}</td>
-              <td>{item.demissao_colaborador}<div></div></td>
+              <td>{item.demissao_colaborador}</td>
               <div id="td-utils">
                 <a id='td-a1'><img src={editar}></img></a>
-                <a id='td-a2'><img src={excluir}></img></a>
+                <a id='td-a2'><img src={excluir}></img>{() => {
+                  const matricula = item.matricula_colaborador;
+                  ExcluiColaborador(matricula)
+                }}</a>
               </div>
               </tr>
               </>
