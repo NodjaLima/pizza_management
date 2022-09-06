@@ -2,9 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 import "./FormColaboradores.css";
 
-
-
-
 const CadastraColaborador = (colaborador) => {
   axios.post('https://restaurante-api-m4.herokuapp.com/colaboradores', colaborador)
   .then(response => {

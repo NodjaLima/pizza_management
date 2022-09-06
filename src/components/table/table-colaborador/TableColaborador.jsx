@@ -34,9 +34,7 @@ const TabelaColaboradores = (props) => {
           <th>Ações</th>
         </thead>
         {info.map((item) => {
-
-
-          return item ? (
+          return(
             <>
             <tr>
               <td id="td-id">{item.matricula_colaborador}</td>
@@ -56,7 +54,7 @@ const TabelaColaboradores = (props) => {
               </div>
               </tr>
               </>
-          ) : null;
+          );
         })}
       </table>
     </div>
