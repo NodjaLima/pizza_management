@@ -25,6 +25,7 @@ const InserirCardapio = () => {
     <>
     {mostra && 
       <div className="post_cardapio">
+        <h3>Digite os dados do novo item</h3>
         <input className="inserir_inp" type='text' placeholder="Categoria" onBlur={(e) => {setCategoria(e.target.value)}}/>
         <input className="inserir_inp" type='text' placeholder="Sabor" onBlur={(e) => {setSabor(e.target.value)}}/>
         <input className="inserir_inp" type='text' placeholder="Ingredientes" onBlur={(e) => {setIngredientes(e.target.value)}}/>
