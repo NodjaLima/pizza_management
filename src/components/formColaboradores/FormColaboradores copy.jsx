@@ -1,16 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
 import "./FormColaboradores.css";
-
-
-
-
-const CadastraColaborador = (colaborador) => {
-  axios.post('https://restaurante-api-m4.herokuapp.com/colaboradores', colaborador)
-  .then(response => {
-    setColaborador(response.data)
-  })
-}
 
 const FormColaboradores = (props) => {
   const [colaborador, setColaborador] = useState({
@@ -130,8 +119,8 @@ const FormColaboradores = (props) => {
       />
       <button onClick={(e) => {
         e.preventDefault();
-        CadastraColaborador(colaborador)
-      }}>ENVIAR</button>
+        props.onFinish(colaborador)
+      }}></button>
     </form>
   );
 };

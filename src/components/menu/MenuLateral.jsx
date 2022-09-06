@@ -1,13 +1,13 @@
+import { useState } from 'react';
 import './MenuLateral.css';
 
-const MenuContainer = () => {
+const MenuContainer = (props) => {
+    const [listar, setListar] = useState(false);
+
     return(
         <ul className='lista-menu-container-colaboradores'>
-            <li>Listar todos</li>
-            <li>Buscar</li>
-            <li>Cadastrar</li>
-            <li>Atualizar dados</li>
-            <li>Excluir</li>
+            <a onClick={props.onClickListar}><li>Listar</li></a>
+            <a onClick={props.onClickCadastrar}><li>Cadastrar</li></a>
         </ul>
     )
 }

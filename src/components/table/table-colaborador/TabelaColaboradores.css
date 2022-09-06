@@ -32,10 +32,33 @@
   width: 150px;
 }
 
+#td-end{
+  width: 300px;
+}
+
 #td-email{
   width: 250px;
 }
 
 #td-sal{
   width: 120px;
+}
+
+#td-utils{
+  display: flex;
+  height: 100px;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  background-color: #eff6e0;
+}
+
+#td-utils a{
+  /* height: 100%; */
+  cursor: pointer;
+  border-bottom: 5px solid transparent;
+}
+
+#td-utils #td-a1:hover, #td-utils #td-a2:hover{
+  border-bottom: 5px solid #AEC3B0;
 }
