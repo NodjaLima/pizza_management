@@ -27,8 +27,18 @@ const ListaCardapio = () => {
   }, [cardapio])
 
   const deleteCardapio = async (id) => {
-    await DeleteCardapio(id)
+    const confirma = confirm("Deseja excluir o item permanentemente?")
+    
+    if(confirma == true) {
+      await DeleteCardapio(id)
+    .then(
+      alert('Item deletado com sucesso')
+    )
     getCardapio()
+    }
+    else {
+      alert('não foi possível deletar o item')
+    }
     }
 
   const Edit = (id) => {
@@ -55,7 +65,7 @@ const ListaCardapio = () => {
                 categoria("Pizza Salgada").map((item) => {
                   return (
                     <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio} deletar={async () => {
-                    await DeleteCardapio(item.id_cardapio)}
+                    await deleteCardapio(item.id_cardapio)}
                     } editar={()=>{
                       setEdit(true)
                       setId(item.id_cardapio)}} />
@@ -70,7 +80,7 @@ const ListaCardapio = () => {
                 categoria("Pizza Doce").map((item) => {
                   return (
                     <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio} deletar={async () => {
-                    await DeleteCardapio(item.id_cardapio)}} 
+                    await deleteCardapio(item.id_cardapio)}} 
                     editar={()=>{
                       setEdit(true)
                       setId(item.id_cardapio)}}/>
@@ -85,7 +95,7 @@ const ListaCardapio = () => {
                 categoria("Bebida").map((item) => {
                   return (
                     <ItemCardapio nome={item.sabor_cardapio} ingredientes={item.ingredientes_cardapio} tamanho={item.tamanho_cardapio} valor={item.valor_cardapio} deletar={async () => {
-                    await DeleteCardapio(item.id_cardapio)}} 
+                    await deleteCardapio(item.id_cardapio)}} 
                     editar={()=>{
                       setEdit(true)
                       setId(item.id_cardapio)}}/>
