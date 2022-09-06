@@ -1,0 +1,41 @@
+.container-tabela-colaboradores {
+  overflow-y: auto;
+}
+
+.tabela-colaboradores{
+  border-collapse: collapse;
+}
+
+.tabela-colaboradores th{
+  padding: 20px;
+  background-color: #AEC3B0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tabela-colaboradores td {
+  font-family: 'Arial', Helvetica, sans-serif;
+  width: auto;
+  padding: 10px 0;
+  background-color: #eff6e0;
+  text-align: center;
+}
+
+#td-nome{
+  width: 200px;
+}
+
+#td-tel{
+  width: 150px;
+}
+
+#td-cpf{
+  width: 150px;
+}
+
+#td-email{
+  width: 250px;
+}
+
+#td-sal{
+  width: 120px;
+}

@@ -1,10 +1,13 @@
 .container-main-colaboradores{
     display: flex;
-    width: 90%;
+    width: 98%;
     height: 800px;
     background-color: #AEC3B0;
     margin: 30px auto;
-    scroll-behavior: smooth;
+}
+
+#p-nome{
+    width: 200px;
 }
 
 .nav-container-main-colaboradores{

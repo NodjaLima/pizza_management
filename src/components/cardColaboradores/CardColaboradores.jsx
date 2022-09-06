@@ -21,11 +21,17 @@ function CardColaboradores() {
       {info.map((item) => {
         return (
           <span className="card-colaborador">
-            <h3>{item.nome_colaborador}</h3>
-            <h1>{`Endereço: ${item.endereco_colaborador}`}</h1>
-            <h1>{`Cargo: ${item.cargo_colaborador}`}</h1>
-            <h1>{`Email: ${item.email_colaborador}`}</h1>
-            <h1>{`Salário: ${item.salario_colaborador}`}</h1>
+            <p>{item.matricula_colaborador}</p>
+            <p id="p-nome">{item.nome_colaborador}</p>
+            <p>{item.cpf_colaborador}</p>
+            <p>{item.endereco_colaborador}</p>
+            <p>{item.cargo_colaborador}</p>
+            <p>{item.email_colaborador}</p>
+            <p>{item.telefone_colaborador}</p>
+            <p>{item.turno_colaborador}</p>
+            <p>{item.salario_colaborador}</p>
+            <p>{item.admissao_colaborador}</p>
+            <p>{item.demissao_colaborador}</p>
           </span>
         );
       })}

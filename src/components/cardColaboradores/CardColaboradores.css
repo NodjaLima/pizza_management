@@ -1,21 +1,25 @@
 .div-card-colaboradores{
-    display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     justify-content: center;
-    gap: 50px;
     width: 100%;
-    overflow-y: scroll;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-block: auto;
+    /* flex-wrap: wrap; */
 }
 
-.div-card-colaboradores .card-colaborador{
-    text-align: center;
-    max-width: 500px;
-    word-wrap: break-word;
-    height: 600px;
+.card-colaborador{
+    display: flex;
+
 }
 
-.div-card-colaboradores .card-colaborador h3{
-    margin-bottom: 20px;
-    font-size: 30pt;
+.card-colaborador p{
+    /* height: 100px; */
+    font-size: auto;
+    background-color: #EFF6E0;
+    align-items: center;
+    text-align: start;
+    padding: 0 10px;
 }

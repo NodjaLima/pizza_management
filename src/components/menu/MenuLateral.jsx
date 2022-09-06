@@ -1,4 +1,4 @@
-import './MenuContainer.css';
+import './MenuLateral.css';
 
 const MenuContainer = () => {
     return(
