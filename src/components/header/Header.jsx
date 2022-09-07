@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
 import { useNavigate } from "react-router-dom";
-import { List } from 'phosphor-react';
 
 export default function Header() {
     const navegate = useNavigate();
@@ -23,9 +22,6 @@ export default function Header() {
             </div>
             <div className="link"onClick={() => navegate("/login")}>
                LOGIN
-            </div>
-            <div className="hamburguer">
-                <List size={40} />
             </div>
         </div>
       </div>

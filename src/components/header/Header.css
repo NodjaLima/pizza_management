@@ -1,3 +1,4 @@
+
 .navbar{
     width: 100vw;
     min-height: 50px;
@@ -44,14 +45,4 @@ img {
     align-items: center;
     display: flex;
     cursor: pointer;
-}
-
-.hamburguer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 16px;
-    margin-right: 28px ;
-    cursor: pointer;
-    border-radius: 25px;
 }
