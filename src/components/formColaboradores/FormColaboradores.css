@@ -1,0 +1,29 @@
+.section-form-colaborador{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.form-cadastro-colaborador {
+    display: grid;
+    grid-template-columns: 500px 250px;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-cadastro-colaborador input{
+    height: 40px;
+    margin: 20px;
+    padding: 0 5px;
+    font-size: 14pt;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border: none;
+}
+
+.section-form-colaborador div{
+    
+}

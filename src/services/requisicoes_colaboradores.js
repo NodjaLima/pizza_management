@@ -9,5 +9,5 @@ export const CriaColaborador = (colaborador) => {
 }
 
 export const ExcluiColaborador = (matricula) => {
-  return axios.delete(`https://restaurante-api-m4.herokuapp.com/colaboradores/:${matricula}`)
+  return axios.delete(`https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`)
 }

@@ -24,6 +24,7 @@ const FormColaboradores = (props) => {
   });
 
   return (
+    <section className="section-form-colaborador">
     <form className="form-cadastro-colaborador">
       <input
         type="text"
@@ -35,7 +36,7 @@ const FormColaboradores = (props) => {
           });
         }}
       />
-      <input
+      <input id="input-cpf"
         type="text"
         placeholder="CPF ex.: 000.111.222-33"
         onChange={(event) => {
@@ -125,11 +126,15 @@ const FormColaboradores = (props) => {
           });
         }}
       />
-      <button onClick={(e) => {
-        e.preventDefault();
-        CadastraColaborador(colaborador)
-      }}>ENVIAR</button>
     </form>
+    <div>
+    <button onClick={(e) => {
+      e.preventDefault();
+      CadastraColaborador(colaborador)
+    }}>ENVIAR</button>
+    <button type='reset'>LIMPAR</button>
+    </div>
+    </section>
   );
 };
 
