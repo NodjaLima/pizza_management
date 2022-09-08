@@ -1,0 +1,13 @@
+.container-main-colaboradores{
+    display: flex;
+    /* flex-direction: column; */
+    width: 98%;
+    height: 800px;
+    background-color: #AEC3B0;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+#p-nome{
+    width: 200px;
+}
