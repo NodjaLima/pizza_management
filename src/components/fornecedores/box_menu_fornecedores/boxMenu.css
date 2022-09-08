@@ -1,26 +1,28 @@
 .box-menu{
+    padding-left: 40px;
+    padding-right: 30px;
     margin-top: 10px;
-    margin-left: 20px;
-    background: #124559;
-    color: #dae4e9;
     display: flex;
+    width: 110px;
+    font-size: 20px;
+    font-family :  'Caudex' , serif ,  'Keania One' ,  'cursive' ;
+    list-style: none;
     text-align: center;
     flex-direction: column;
     justify-content: space-around;
-    width: 120px;
-    height: 70%;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow';;
-    list-style: none;
+    color: #dae4e9;
 }
 
 .box-menu li{
-    padding: 100% 0;
-    border-radius: 15px;
-    border: 2px solid #01161E;
+    width: 110px;
+    height: 100px;
+    padding: 90% 0;
+    border-radius: 90px 90px 90px 90px;
+    background: #124559;
+    border: 2px solid #AEC3B0;
     box-shadow: 0 0 6px #01161E,
     0 0 12px #124559,
-    0 0 10px #dae4e9;
+    0 0 7px #dae4e9;
     cursor: pointer;
 }
 

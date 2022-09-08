@@ -1,0 +1,59 @@
+.box-lista {
+    font-family: 'Arial Narrow';
+    width: 100%;
+    color: #eff6e0;
+    text-transform: uppercase;
+    overflow-y: auto;
+    margin-left: 150px;
+    margin-right: 100px;
+    padding-top: 15px;
+    justify-items: center;
+    text-align: center;
+    border: 2px solid #AEC3B0;
+    box-shadow: 0 0 10px #01161E,
+    0 0 10px #AEC3B0,
+    0 0 15px #01161E;
+ 
+  }
+  
+  .lista2{
+    border-collapse: separate;
+  }
+  
+  .lista2 th{
+    border-collapse: separate;
+    padding: 20px;
+    background-color: transparent
+  }
+  
+  .lista2 td {
+    width: auto;
+    padding: 20px 0;
+    background-color: #eff6e0;
+    text-align: center;
+  }
+  
+  #td-nome{
+    width: 200px;
+  }
+  
+  #td-telefone{
+    width: 150px;
+  }
+  
+  #td-cnpj{
+    width: 150px;
+  }
+  
+  #td-endereço{
+    width: 300px;
+  }
+  
+  #td-email{
+    width: 250px;
+  }
+
+  #td-ramo{
+    width: 250px;
+  }
+  
