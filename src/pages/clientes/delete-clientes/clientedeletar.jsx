@@ -14,7 +14,7 @@ const Deletaclientes = () => {
     useEffect(() =>{
         axios.get('https://restaurante-api-m4.herokuapp.com/clientes')
         .then(response => {
-            console.log(response.data)
+            // console.log(response.data)
             setOptions(response.data)
         } )
 
@@ -24,8 +24,9 @@ const Deletaclientes = () => {
         return null
     }
 
-    const ids = Object.keys(options[0])
-    console.log(ids)
+    // const ids = Object.values(options[0])
+    // // console.log(ids)
+    // console.log(options[0].id_cliente)
         
     return (
 
@@ -40,14 +41,16 @@ const Deletaclientes = () => {
                 <label>ID cliente: 
                     <select>
 
-                        <option>oi</option>
-                        <option>tudo bem</option>
+                        <option>Selecione</option>
 
-                        {ids.map((id) =>{
-                                <option key={id} value={id}>
-                                    {id}
+                        {options.map((id, index) =>{
+                             return(
+                                <option key={index} value={id.id_cliente}>
+                                    {id.id_cliente}
                                 </option>
-                                // console.log(options.id_cliente)
+                                  // console.log(id.id_cliente)
+                             )
+                              
                             })}                    
                     </select>
                 </label>
