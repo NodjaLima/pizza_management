@@ -18,9 +18,15 @@ const Row = ({ record }) => {
 }
 
 
-const Tabela = ({ cliente }) => {
+const Tabelacliente = ({ cliente }) => {
 
+    if(cliente.length===0){
+        return null
+    }
+    
     const keys = Object.keys(cliente[0])
+    
+
 
     return(
         <div>
@@ -43,4 +49,4 @@ const Tabela = ({ cliente }) => {
     )
 }
 
-export default Tabela
+export default Tabelacliente

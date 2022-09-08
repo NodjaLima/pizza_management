@@ -1,9 +1,10 @@
 import React from "react";
-import Tabela from "../../../components/table/tab-clientes/tabelaclientes"
+import Tabelacliente from "../../../components/table/tab-clientes/tabelaclientes";
 
 import { useState, useEffect } from "react";
 
 import axios from "axios";
+
 
 
 const Verclientes = () => {
@@ -19,8 +20,8 @@ const Verclientes = () => {
             // console.log("seu cliente é: " + JSON.stringify(cliente))
 
         })
-        .catch(() =>{
-            console.log('Deu erro.')
+        .catch((error) =>{
+            console.log(error.message)
         })
     }, [])
 
@@ -30,7 +31,7 @@ const Verclientes = () => {
             <h1>Clientes Cadastrados</h1> <br></br>
 
             <div>
-                <Tabela cliente={cliente}/>
+                <Tabelacliente cliente={cliente}/>
             </div>
 
         </div>
