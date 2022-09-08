@@ -51,10 +51,10 @@ const TabelaColaboradores = (props) => {
               <td>{item.demissao_colaborador}</td>
               <div id="td-utils">
                 <a id='td-a1'><img src={editar}></img></a>
-                <a id='td-a2'><img src={excluir}></img>{() => {
+                <a id='td-a2' await onClick={async () => {
                   const matricula = item.matricula_colaborador;
-                  ExcluiColaborador(matricula)
-                }}</a>
+                  await ExcluiColaborador(matricula)}}><img src={excluir}></img>
+                </a>
               </div>
               </tr>
               </>
