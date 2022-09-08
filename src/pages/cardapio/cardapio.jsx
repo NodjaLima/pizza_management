@@ -19,19 +19,19 @@ const Cardapio = () => {
       <h1>GERENCIE O SEU CARDÁPIO</h1>
 
       <div className='cardapio-botoes'>
-      <button onClick={()=>{
+      <button className='btn' onClick={()=>{
         setMostraCardapio(true)
         setInserirCardapio(false)
         setPesquisaCardapio(false)
         setInicio(false)}
         }>Vizualizar</button>
-      <button onClick={()=>{
+      <button className='btn'onClick={()=>{
         setMostraCardapio(false)
         setInserirCardapio(true)
         setPesquisaCardapio(false)
         setInicio(false)}
         }>Inserir</button>
-      <button onClick={()=>{
+      <button className='btn'onClick={()=>{
         setMostraCardapio(false)
         setInserirCardapio(false)
         setPesquisaCardapio(true)

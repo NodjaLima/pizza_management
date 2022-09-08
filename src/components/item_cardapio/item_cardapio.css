@@ -13,9 +13,18 @@
 .botoes-item{
   width: 100px;
   justify-content: space-between;
-
 }
 
 .btn-item{
-  margin: 5px;
+  width: 100%;
+  background-color: rgb(13, 13, 48);
+  color: white;
+  border-radius: 12px;
+  height: 30px;
+  transition-duration: 0.4s;
+}
+
+.btn-item:hover{
+  background-color: #654cd3;
+  cursor:pointer;
 }

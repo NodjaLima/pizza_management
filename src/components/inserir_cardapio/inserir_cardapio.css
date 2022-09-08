@@ -7,11 +7,22 @@
   padding: 20px;
 }
 
-.Cadatrar_btn{
-  width: 30%;
-}
+
 
 .inserir_inp{
   width: 70%;
 }
 
+.Cadatrar_btn{
+  width: 30%;
+  background-color: rgb(13, 13, 48);
+  color: white;
+  border-radius: 12px;
+  height: 40px;
+  transition-duration: 0.4s;
+}
+
+.Cadatrar_btn:hover{
+  background-color: #654cd3;
+  cursor:pointer;
+}

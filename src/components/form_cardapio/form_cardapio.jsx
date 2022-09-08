@@ -1,3 +1,5 @@
+import './form_cardapio.css'
+
 const FormularioCardapio = (props) => {
   return ( 
     <div className="put-cardapio">
