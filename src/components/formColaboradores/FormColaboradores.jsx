@@ -3,6 +3,8 @@ import axios from "axios";
 import "./FormColaboradores.css";
 
 const FormColaboradores = (props) => {
+
+  const [cadastro, setCadastro] = useState(true)
   const [colaborador, setColaborador] = useState({
     nome_colaborador: "",
     cpf_colaborador: "",
