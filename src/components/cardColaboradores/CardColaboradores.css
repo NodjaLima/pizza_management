@@ -1,0 +1,25 @@
+.div-card-colaboradores{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-block: auto;
+    /* flex-wrap: wrap; */
+}
+
+.card-colaborador{
+    display: flex;
+
+}
+
+.card-colaborador p{
+    /* height: 100px; */
+    font-size: auto;
+    background-color: #EFF6E0;
+    align-items: center;
+    text-align: start;
+    padding: 0 10px;
+}

@@ -1,0 +1,51 @@
+.section-form-colaborador {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+}
+
+.form-cadastro-colaborador {
+  display: grid;
+  grid-template-columns: 500px 250px;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.form-cadastro-colaborador input {
+  height: 40px;
+  margin: 20px;
+  padding: 0 5px;
+  font-size: 14pt;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  border: none;
+}
+
+.section-form-colaborador div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.section-form-colaborador button {
+  background-color: #eff6e0;
+  border: #ccc;
+  padding: 20px 40px;
+  border-radius: 10px;
+  transition: 0.5s;
+  margin: 0 20px;
+}
+
+.section-form-colaborador button:hover {
+  background-color: #598392;
+  color: white;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  font-size: 10pt;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
