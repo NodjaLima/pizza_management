@@ -19,6 +19,7 @@
   background-color: rgb(13, 13, 48);
   color: white;
   border-radius: 12px;
+  border: none;
   height: 40px;
   transition-duration: 0.4s;
 }

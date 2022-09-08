@@ -21,7 +21,9 @@
   color: white;
   border-radius: 12px;
   height: 30px;
+  border: none;
   transition-duration: 0.4s;
+  margin: 2px;
 }
 
 .btn-item:hover{

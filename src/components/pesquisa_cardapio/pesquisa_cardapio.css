@@ -22,3 +22,18 @@
 .texto-item-cardapio{
   width: 700px;
 }
+
+.btn-pesquisar{
+  width: 100px;
+  background-color: rgb(13, 13, 48);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  height: 30px;
+  transition-duration: 0.4s;
+}
+
+.btn-pesquisar:hover{
+  background-color: #654cd3;
+  cursor:pointer;
+}

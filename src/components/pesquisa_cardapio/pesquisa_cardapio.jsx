@@ -32,7 +32,7 @@ const PesquisaCardapio = () => {
         ))}    
         </select>
           <input type="text" onBlur={(e)=>{setInputValue(e.target.value)}}/>
-          <button onClick={()=> {
+          <button className='btn-pesquisar' onClick={()=> {
             Pesquisar(select, inputValue)
           }}>Pesquisar</button>
       </div>
