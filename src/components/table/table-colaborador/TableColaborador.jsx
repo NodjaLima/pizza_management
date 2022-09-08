@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./TabelaColaboradores.css";
-import { GetColaboradores } from "../../../services/requisicoes_colaboradores";
 import editar from '../../../assets/img/editar-icone50.png'
 import excluir from '../../../assets/img/excluir-icone50.png'
 import { ExcluiColaborador } from "../../../services/requisicoes_colaboradores";
