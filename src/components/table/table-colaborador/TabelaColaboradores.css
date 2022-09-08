@@ -1,9 +1,11 @@
 .container-tabela-colaboradores {
   overflow-y: auto;
+  width: 100%;
 }
 
 .tabela-colaboradores{
   border-collapse: collapse;
+  width: 100%;
 }
 
 .tabela-colaboradores th{
