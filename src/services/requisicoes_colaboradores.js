@@ -9,13 +9,9 @@ export const CriaColaborador = (colaborador) => {
 };
 
 export const EditaColaborador = async (matricula, colaborador) => {
-  return axios.put(
-    `https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`, {...colaborador}
-  );
+  return axios.put(`https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`, colaborador)
 };
 
 export const ExcluiColaborador = async (matricula) => {
-  return axios.delete(
-    `https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`
-  );
+  return axios.delete(`https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`)
 };

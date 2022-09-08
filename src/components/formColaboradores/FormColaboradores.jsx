@@ -137,10 +137,10 @@ const FormColaboradores = (props) => {
         />
       </form>
       <div>
-        <button type="reset" form="form">
+        <button type="reset" form="form" id="btn-reset">
           LIMPAR
         </button>
-        <button
+        <button id="btn-send"
           onClick={(e) => {
             e.preventDefault();
 

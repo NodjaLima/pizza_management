@@ -27,22 +27,31 @@
 .section-form-colaborador div {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
   width: 100%;
 }
 
 .section-form-colaborador button {
   background-color: #eff6e0;
   border: #ccc;
-  padding: 20px 40px;
+  padding: 20px 50px;
   border-radius: 10px;
+  width: 300px;
   transition: 0.5s;
   margin: 0 20px;
 }
 
 .section-form-colaborador button:hover {
-  background-color: #598392;
   color: white;
   cursor: pointer;
+}
+
+.section-form-colaborador #btn-send:hover{
+  background-color: #1d8639;
+}
+
+.section-form-colaborador #btn-reset:hover{
+  background-color: #d72b2b;
 }
 
 ::-webkit-input-placeholder {

@@ -3,7 +3,7 @@ import axios from "axios";
 import "./TabelaColaboradores.css";
 import editar from '../../../assets/img/editar-icone50.png'
 import excluir from '../../../assets/img/excluir-icone50.png'
-import { ExcluiColaborador, EditaColaborador } from "../../../services/requisicoes_colaboradores";
+import { GetColaboradores, ExcluiColaborador, EditaColaborador } from "../../../services/requisicoes_colaboradores";
 import FormColaboradores from "../../formColaboradores/FormColaboradores";
 
 const TabelaColaboradores = (props) => {
@@ -11,8 +11,7 @@ const TabelaColaboradores = (props) => {
   const [page, setPage] = useState([])
 
   useEffect(() => {
-    axios
-      .get("https://restaurante-api-m4.herokuapp.com/colaboradores")
+    GetColaboradores()
       .then((response) => {
         setInfo(response.data);
         setPage(response.data);
