@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Menu from './components/menu/Menu'
+import Cardapio from './pages/cardapio/cardapio'
 import Home from './pages/home/Home'
-import CardColaboradores from './components/cardColaboradores/CardColaboradores'
 
 function App() {
 
@@ -13,9 +13,9 @@ function App() {
           <Routes>
             //para criar rotas usar letras minuscular e separar palavras com _
             <Route path='/' exact element={<Home />} />
-            <Route path='/cardapio' exact element={<h1>Esse será o cardapio</h1>} />
+            <Route path='/cardapio' exact element={<Cardapio />} />
             <Route path='/clientes' exact element={<h1>Essa será a pagina de clientes</h1>} />
-            <Route path='/colaboradores' exact element={<CardColaboradores/>} />
+            <Route path='/colaboradores' exact element={<h1>Essa será a pagina de colaboradores</h1>} />
             <Route path='/fornecedores' exact element={<h1>Essa será a essa será a pagina de fornecedores</h1>} />
           </Routes>
         </BrowserRouter>
