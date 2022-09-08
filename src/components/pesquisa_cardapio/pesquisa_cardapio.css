@@ -1,0 +1,24 @@
+.pesquisa-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pesquisar{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.item-cardapio-container{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: max-content;
+  justify-content: space-around;
+}
+
+.texto-item-cardapio{
+  width: 700px;
+}
