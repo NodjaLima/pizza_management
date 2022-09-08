@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./TabelaColaboradores.css";
+import { GetColaboradores } from "../../../services/requisicoes_colaboradores";
 import editar from '../../../assets/img/editar-icone50.png'
 import excluir from '../../../assets/img/excluir-icone50.png'
 import { ExcluiColaborador } from "../../../services/requisicoes_colaboradores";
 
 const TabelaColaboradores = (props) => {
   const [info, setInfo] = useState([]);
+  const [page, setPage] = useState([])
 
   useEffect(() => {
     axios
       .get("https://restaurante-api-m4.herokuapp.com/colaboradores")
       .then((response) => {
         setInfo(response.data);
+        setPage(response.data);
       })
       .catch((erro) => console.log(erro));
-  }, []);
+  }, [page]);
 
   return (
     <div className="container-tabela-colaboradores">
@@ -52,8 +55,9 @@ const TabelaColaboradores = (props) => {
               <div id="td-utils">
                 <a id='td-a1'><img src={editar}></img></a>
                 <a id='td-a2' await onClick={async () => {
-                  const matricula = item.matricula_colaborador;
-                  await ExcluiColaborador(matricula)}}><img src={excluir}></img>
+                  const pergunta = confirm(`Deseja excluir os dados do colaborador ${item.nome_colaborador}?`)
+                  pergunta ? await ExcluiColaborador(item.matricula_colaborador).then(alert('Colaborador excluído com sucesso.')) : alert('Exclusão cancelada.')
+                  }}><img src={excluir}></img>
                 </a>
               </div>
               </tr>
