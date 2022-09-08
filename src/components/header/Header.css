@@ -1,13 +1,14 @@
 
 .navbar{
-    width: 100vw;
+    width: 100%;
     min-height: 50px;
     max-height: 62px;
-    background-color: #01161E;
     display: flex;
     flex-direction: row;
     border-radius: 0 0 20px 20px;
-    font-size: 17px;
+    font-family: 'Courier Prime', monospace;
+    background-color: #01161E;
+ 
 }
 
 .links-menu{
@@ -15,10 +16,11 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    font-family: 'Franklin Gothic Medium Cond';
+    font-family: 'Courier Prime', monospace;
     color: #EFF6E0;
     justify-content: space-around;
     gap: 5px;
+    margin-right: 35px;
 
 }
 
@@ -38,11 +40,24 @@ img {
     align-items: center;
 }
 
+img:hover{
+    transform: scale(0.9);
+    transition: 0.6s;
+}
+
 .link{
+    margin-right: 18px;
+    margin-left: 10px;
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.link:hover{
+    transform: scale(0.9);
+    transition: 0.6s;
 }
