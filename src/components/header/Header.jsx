@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css'
 import { useNavigate } from "react-router-dom";
-import { List } from 'phosphor-react';
 
 export default function Header() {
     const navegate = useNavigate();
@@ -9,23 +8,20 @@ export default function Header() {
     return (
       <div className= "navbar">
         <div className="logo">
-            <img src="/src/assets/img/logopizza.png"></img>
+            <img src="/src/assets/img/logo.png"></img>
         </div>
         <div className="links-menu">  
-            <div className="link" onClick={() => navegate("/home")}>
-               HOME 
+            <div className="link" onClick={() => navegate("/cardapio")}>
+               CARDAPIO
             </div>
-            <div className="link" onClick={() => navegate("/sobre")}>
-               SOBRE
+            <div className="link" onClick={() => navegate("/cliente")}>
+               CLIENTE
             </div>
-            <div className="link"onClick={() => navegate("/contato")}>
-               CONTATO
+            <div className="link"onClick={() => navegate("/colaboradores")}>
+               COLABORADORES
             </div>
-            <div className="link"onClick={() => navegate("/login")}>
-               LOGIN
-            </div>
-            <div className="hamburguer">
-                <List size={40} />
+            <div className="link"onClick={() => navegate("/fornecedores")}>
+               FORNECEDORES
             </div>
         </div>
       </div>
