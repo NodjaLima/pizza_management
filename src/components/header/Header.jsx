@@ -8,7 +8,7 @@ export default function Header() {
     return (
       <div className= "navbar">
         <div className="logo">
-            <img src="/src/assets/img/logo.png" onClick={() => navegate("/")}></img>
+            <img src="../../assets/img/logo.png" onClick={() => navegate("/")}></img>
         </div>
         <div className="links-menu">  
             <div className="link" onClick={() => navegate("/cardapio")}>
