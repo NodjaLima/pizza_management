@@ -32,27 +32,27 @@
     text-align: center;
   }
   
-  #td-nome{
+  #lista-nome{
     width: 200px;
   }
   
-  #td-telefone{
+  #lista-telefone{
     width: 150px;
   }
   
-  #td-cnpj{
+  #lista-cnpj{
     width: 150px;
   }
   
-  #td-endereço{
+  #lista-endereço{
     width: 300px;
   }
   
-  #td-email{
+  #lista-email{
     width: 250px;
   }
 
-  #td-ramo{
+  #lista-ramo{
     width: 250px;
   }
   

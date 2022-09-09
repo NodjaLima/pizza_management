@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import { useContext } from "react"
 import { LoginContext } from '../context/context_login.jsx'
-import Fornecedores from "../pages/fornecedores/Fornecedores.jsx"
+import Fornecedores from '../pages/fornecedores/Fornecedores.jsx'
 import Colaboradores from '../pages/colaboradores/Colaboradores.jsx'
 import Cardapio from '../pages/cardapio/cardapio.jsx'
 import Clientes from '../pages/clientes/clientes.jsx'

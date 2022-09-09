@@ -28,8 +28,10 @@ export default function FormsFornecedores() {
 							<input type="text" placeholder="Inserir ramo" onChange={(event) => {setUser({...user, ramo: event.target.value})}}/>
 							<input type="text" placeholder="Inserir email" onChange={(event) => {setUser({...user, email: event.target.value})}}/>
 							<input type="number" placeholder="Inserir telefone" onChange={(event) => {setUser({...user, telefone: event.target.value})}}/>
-							<button onClick={(e) => {e.preventDefault(); NovoFornecedor(user)}}>CADASTRAR</button>
+						<div className="botoes"	>
+              <button onClick={(e) => {e.preventDefault(); NovoFornecedor(user)}}>CADASTRAR</button>
 							<button type='reset'>APAGAR</button>
+            </div>
 						</form>
 						</section>
 					</div>
