@@ -23,9 +23,6 @@ export default function Header() {
             <div className="link"onClick={() => navegate("/fornecedores")}>
                FORNECEDORES
             </div>
-            <div className="link"onClick={() => navegate("/login")}>
-               LOGIN
-            </div>
         </div>
       </div>
     )

@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../pages/home/Home.jsx'
 import Header from '../components/header/Header.jsx'
-import Fornecedores from '../pages/fornecedores/Fornecedores'
+import Fornecedores from '../pages/fornecedores/fornecedores.jsx'
+import Clientes from '../pages/clientes/clientes.jsx'
 import Colaboradores from '../pages/colaboradores/Colaboradores.jsx'
 import Cardapio from '../pages/cardapio/cardapio.jsx'
 import Login from '../pages/login/login.jsx'
@@ -17,7 +18,7 @@ export default function Router() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/cardapio' exact element={<Cardapio />} />
-                <Route path='/clientes' exact element={<clientes/>} />
+                <Route path='/cliente' exact element={<Clientes/>} />
                 <Route path='/colaboradores' exact element={<Colaboradores/>} />
                 <Route path='/fornecedores' exact element={<Fornecedores />} />
                 <Route path='/login' exact element={<Login />} />
