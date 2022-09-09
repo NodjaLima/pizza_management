@@ -20,14 +20,37 @@ const Deletaclientes = () => {
     }, [])
 
     //bloco para preenchimento dos campos <p> após seleção do id do cliente
-    const [infoCliente, setInfoCliente] = useState ([]);
+    const [idCliente, setIdCliente] = useState(1);
+    const [dadosCliente, setDadosCliente] = useState([]);
+
+    function onChange(event){
+        
+        setIdCliente(event.target.value)
+
+        const infocliente = options.filter((item) =>{
+            return item.id_cliente === Number(event.target.value)
+            // console.log(idCliente)
+        })
+        
+        setDadosCliente(infocliente)
+        
+    }
+
+    console.log(dadosCliente)
+    
+    // const infocliente = options.filter((item) =>{
+    //     item.id_cliente === Number(idCliente)
+    //     console.log(idCliente)
+    // })
+
+    
 
     //bloco apara deletar o cliente referente ao id selecionado
-
     function onclick(event){
         event.preventDefault()
         
-        let idc = 4
+
+        let idc = idCliente
         const deletarcliente = confirm(`Deseja excluir o cliente ID: ${idc}?`)
         
         if(deletarcliente == true){
@@ -36,6 +59,13 @@ const Deletaclientes = () => {
             .then(response => {
             
                 alert('Cliente deletado.')
+            
+            .catch(error => {
+                
+                alert("Erro ao deletar usuário.")
+
+            })
+
         })}        
         
     }
@@ -55,7 +85,7 @@ const Deletaclientes = () => {
 
             <p>
                 <label>ID cliente: 
-                    <select>
+                    <select onChange={(event) => {onChange(event)}}>
 
                         <option>Selecione</option>
 
@@ -63,51 +93,58 @@ const Deletaclientes = () => {
                                 return(
                                     <option key={index} value={id.id_cliente}>
                                         {id.id_cliente}
-                                    </option>
-                                    // console.log(id.id_cliente)
+                                    </option>                                    
                                 )                              
-                            })}                    
+                            })}
                     </select>
                 </label>
 
-            </p><br></br><br></br><br></br>
+            </p><br></br><br></br>
+             
+             { dadosCliente.length > 0 && 
+             
+                <div >
+                    <div className="div-retorno-dados">
+                    <div><p> Nome: </p></div>
+                    <div><p> {dadosCliente[0].nome_cliente} </p></div>
+                    </div>                
+                    
+                    <hr></hr><br></br>
+                    
+                    <div className="div-retorno-dados">
+                    <div><p> CPF: </p></div>
+                    <div><p> {dadosCliente[0].cpf_cliente} </p></div>
+                    </div>                
+                    
+                    <hr></hr><br></br>
 
-            <div className="div-retorno-dados">
-            <div><p> Nome: </p></div>
-            <div><p> Renato Tadeu Negrelly junior </p></div>
-            </div>                
-            
-            <hr></hr><br></br><br></br>
-            
-            <div className="div-retorno-dados">
-            <div><p> CPF: </p></div>
-            <div><p> 13815800765 </p></div>
-            </div>                
-            
-            <hr></hr><br></br><br></br>
+                    <div className="div-retorno-dados">
+                    <div><p> Endereço: </p></div>
+                    <div><p> {dadosCliente[0].endereco_cliente} </p></div>
+                    </div>
+                    
+                    <hr></hr><br></br>
+                    
+                    <div className="div-retorno-dados">
+                    <div><p> Email: </p></div>
+                    <div><p> {dadosCliente[0].email_cliente}  </p></div>
+                    </div>
+                                
+                    <hr></hr><br></br>
 
-            <div className="div-retorno-dados">
-            <div><p> Endereço: </p></div>
-            <div><p> Rua Nossa Senhora das Dores, 591 - Ilha do Governador, RJ </p></div>
-            </div>
-            
-            <hr></hr><br></br><br></br>
-            
-            <div className="div-retorno-dados">
-            <div><p> Email: </p></div>
-            <div><p> renato@gmail.com </p></div>
-            </div>
-            
-            
-            <hr></hr><br></br><br></br>
+                    <div className="div-retorno-dados">
+                    <div><p> Telefone: </p></div>
+                    <div><p> {dadosCliente[0].telefone_cliente} </p></div>
+                    </div>                
+                    
+                    <hr></hr><br></br><br></br>
 
-            <div className="div-retorno-dados">
-            <div><p> Telefone: </p></div>
-            <div><p> 21988888888 </p></div>
-            </div>                
-            
-            <hr></hr><br></br><br></br>
+                                    
+                </div>     
 
+             }
+
+                                   
             <button className="btn-cliente" onClick={onclick}>Deletar</button>
 
 
