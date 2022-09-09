@@ -2,8 +2,7 @@ import { LoginContext } from '../../context/context_login'
 import { React, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import Login from '../login/login';
-import './home.css'
-
+import './Home.css'
 
 const Home = () => {
 
