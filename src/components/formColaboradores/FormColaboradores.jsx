@@ -134,7 +134,7 @@ const FormColaboradores = (props) => {
           }}
         />
       </form>
-      <div>
+      <div className="btn-form-colaborador">
         <button type="reset" form="form" id="btn-reset">
           LIMPAR CAMPOS
         </button>
