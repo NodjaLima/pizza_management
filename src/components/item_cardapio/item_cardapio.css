@@ -17,7 +17,7 @@
 
 .btn-item{
   width: 100%;
-  background-color: rgb(13, 13, 48);
+  background-color:#01161E;
   color: white;
   border-radius: 12px;
   height: 30px;
@@ -27,6 +27,7 @@
 }
 
 .btn-item:hover{
-  background-color: #654cd3;
+  background-color: #AEC3B0;
   cursor:pointer;
+  color: #124559;
 }
