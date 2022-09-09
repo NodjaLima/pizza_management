@@ -30,7 +30,7 @@ uma página web em ReactJs, usando os dados da [API REST](https://github.com/rne
 2. [x] Utilizar o README.md do repositório para documentação do projeto;
 3. [x] Utilizar a biblioteca react-router-dom para roteamento das páginas;
 4. [x] Utilizar CSS Grid para definição do layout das páginas;
-5. [ ] Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
+5. [x] Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
 6. [x] Contenha as funcionalidades básicas do CRUD:
 7. [x] Página para listar os cadastros com opção de busca;
 8. [x] Página para incluir um novo registro;
