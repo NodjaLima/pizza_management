@@ -7,6 +7,7 @@ import Cardapio from '../pages/cardapio/cardapio.jsx'
 import Clientes from '../pages/clientes/clientes.jsx'
 import Home from '../pages/home/Home.jsx'
 import BoasVindas from "../pages/boasvindas/boasvindas.jsx"
+import Sobre from "../pages/sobre/sobre.jsx"
 
 export const AppRoutes = () => {
 
@@ -16,6 +17,7 @@ export const AppRoutes = () => {
 
     <Routes>
     <Route path='/' element={<Home />} />
+    <Route path='/sobre' element={<Sobre />} />
     {usuario.length == 1 && <Route path='/boas-vindas' exact element={<BoasVindas />} />}
     {usuario.length == 1 && <Route path='/cardapio' exact element={<Cardapio />} />}
     {usuario.length == 1 && <Route path='/cliente' exact element={<Clientes/>} />}
