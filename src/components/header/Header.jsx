@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { useNavigate } from "react-router-dom";
+import logo from  '../../assets/img/logo.png'
 
 export default function Header() {
     const navegate = useNavigate();
@@ -8,21 +9,21 @@ export default function Header() {
     return (
       <div className= "navbar">
         <div className="logo">
-            <img src="/src/assets/img/logo.png"></img>
+            <img src={logo} onClick={() => navegate("/")}></img>
         </div>
         <div className="links-menu">  
-            <div className="link" onClick={() => navegate("/cardapio")}>
-               CARDAPIO
+            <div className="link" onClick={() => navegate("/boas-vindas")}>
+               Home
             </div>
-            <div className="link" onClick={() => navegate("/cliente")}>
-               CLIENTE
+            
+            <div className="link" onClick={() => navegate("/sobre")}>
+               Sobre
             </div>
-            <div className="link"onClick={() => navegate("/colaboradores")}>
-               COLABORADORES
+
+            <div className="link"onClick={() => navegate("/")}>
+               Login
             </div>
-            <div className="link"onClick={() => navegate("/fornecedores")}>
-               FORNECEDORES
-            </div>
+
         </div>
       </div>
     )

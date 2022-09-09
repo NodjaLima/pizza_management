@@ -36,9 +36,9 @@ const InserirCardapio = () => {
     }
 
     {!mostra && 
-    <div>
+    <div className="post_cardapio">
     <h3>Item inserido com sucesso!</h3>
-    <button onClick={()=> {setMostra(true)}}>Cadastrar Novo Item</button>
+    <button className="Cadatrar_btn" onClick={()=> {setMostra(true)}}>Cadastrar Novo Item</button>
     </div> 
     }
     </>

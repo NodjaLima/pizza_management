@@ -24,3 +24,7 @@ export const PutCardapio = (id, objeto) => {
 export const DeleteCardapio = async (id) => {
   return await axios.delete(`https://restaurante-api-m4.herokuapp.com/cardapio/delete/${id}`)
 }
+
+export const PesquisaCardapioPorCategoria = async (categoria, valor) => {
+  return await axios.get(`https://restaurante-api-m4.herokuapp.com/cardapio/${categoria}/${valor}`)
+}

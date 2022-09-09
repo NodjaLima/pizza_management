@@ -1,19 +1,34 @@
 import { LoginContext } from '../../context/context_login'
-import { useContext } from 'react';
+import { React, useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
+import Login from '../login/login';
+import './Home.css'
 
 const Home = () => {
+
+  const [loading , setLoading] = useState(false);
+
+    useEffect(() => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }, []);
 
   const { usuario, setUsuario } = useContext(LoginContext)
   const navigate = useNavigate()
 
-  return ( 
+  return (
+    <div className='mother'>
+            {
+                loading ? 
+                <div className='loading'>
+                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+                : 
     <div>
-      <h1>{`Bem vindo ao Pizza Management, ${usuario[0].nome_colaborador}!`}</h1>
-      <button type='button' onClick={(e) => {navigate('/cardapio')}}>Cardapio</button>
-      <button type='button' onClick={(e) => {navigate('/colaboradores')}}>Colaboradores</button>
-      <button type='button' onClick={(e) => {navigate('/fornecedores')}}>Fornecedores</button>
-
+      <Login />
+    </div>}
     </div>
    );
 }

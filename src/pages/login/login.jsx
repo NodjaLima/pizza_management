@@ -25,10 +25,11 @@ const Login = () => {
   const Logar = (valor) => {
 
     const isValid = entrante.filter((item) => item.matricula_colaborador === Number(valor.matricula_colaborador) && item.cpf_colaborador === valor.cpf_colaborador)
-    console.log(valor)
+
+    console.log(isValid)
 
     if (isValid.length == 1) {
-      navigate('/')
+      navigate('/boas-vindas')
       setUsuario(isValid)
     } else {
       alert('usuario nao encontrado')

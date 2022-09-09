@@ -30,18 +30,18 @@ export default function ListaFornecedores (){
           return(
             <>
             <tr>
-              <td id="td-nome">{item.nome_fornecedores}</td>
-              <td id="td-cnpj">{item.cnpj_fornecedores}</td>
-              <td id="td-endereço">{item.endereco_fornecedores}</td>
-              <td id="td-ramo">{item.ramo_fornecedores}</td>
-              <td id="td-email">{item.email_fornecedores}</td>
-              <td id="td-telefone">{item.telefone_fornecedores}</td>
+              <td id="lista-nome">{item.nome_fornecedor}</td>
+              <td id="lista-cnpj">{item.cnpj_fornecedor}</td>
+              <td id="lista-endereço">{item.endereco_fornecedor}</td>
+              <td id="lista-ramo">{item.ramo_fornecedor}</td>
+              <td id="lista-email">{item.email_fornecedor}</td>
+              <td id="lista-telefone">{item.telefone_fornecedor}</td>
            
                <img src={editar}></img>
               
-                <a id='td-a2' await onClick={async () => {
-                  const pergunta = confirm(`Excluir fornecedor ${item.nome_fornecedores}?`)
-                  pergunta ? await deleteFornecedores(item.ramo_fornecedores).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
+                <a id='excluir-forn' await onClick={async () => {
+                  const pergunta = confirm(`Excluir fornecedor ${item.nome_fornecedor}?`)
+                  pergunta ? await deleteFornecedores(item.ramo_fornecedor).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
                   }}><img src={excluir}></img>
                 </a>
             </tr>
