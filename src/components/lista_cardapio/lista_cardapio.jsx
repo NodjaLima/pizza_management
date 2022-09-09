@@ -3,6 +3,7 @@ import ItemCardapio from '../item_cardapio/item_cardapio'
 import { RequisicaoCardapio, PutCardapio, DeleteCardapio } from '../../services/requisicoes_cardapio'
 
 import './lista_cardapio.css'
+import FormularioCardapio from '../form_cardapio/form_cardapio'
 
 const ListaCardapio = () => {
 
@@ -105,17 +106,8 @@ const ListaCardapio = () => {
             </div>
           </div>}
 
-        {edit && 
-        <div className="put-cardapio">
-          <h3>Insira as informações para atualizar o item do cardapio</h3>  
-          <input className="editar_inp" type='text' placeholder="Categoria" onBlur={(e) => {setItem({...item, categoria_cardapio: e.target.value})}}/>
-          <input className="editar_inp" type='text' placeholder="Sabor" onBlur={(e) => {setItem({...item, sabor_cardapio: e.target.value})}}/>
-          <input className="editar_inp" type='text' placeholder="Ingredientes" onBlur={(e) => {setItem({...item, ingredientes_cardapio: e.target.value})}}/>
-          <input className="editar_inp" type='text' placeholder="Tamanho" onBlur={(e) => {setItem({...item, tamanho_cardapio: e.target.value})}}/>
-          <input className="editar_inp" type='text' placeholder="Preço" onBlur={(e) => {setItem({...item, valor_cardapio: e.target.value})}}/>
-          <button className="editar_btn" onClick={(e) => Edit(id)}>Salvar Alterações</button>
-      </div>
-      }
+        {edit && <FormularioCardapio onBlurCategoria={(e) => {setItem({...item, categoria_cardapio: e.target.value})}} onBlurSabor={(e) => {setItem({...item, sabor_cardapio: e.target.value})}} onBlurIngredientes={(e) => {setItem({...item, ingredientes_cardapio: e.target.value})}} onBlurTamanho={(e) => {setItem({...item, tamanho_cardapio: e.target.value})}} onBlurPreco={(e) => {setItem({...item, valor_cardapio: e.target.value})}} onClick={(e) => Edit(id)} label={'Salvar Alterações'}/>}
+        
 
     </div>
          
@@ -123,3 +115,4 @@ const ListaCardapio = () => {
 }
  
 export default ListaCardapio;
+
