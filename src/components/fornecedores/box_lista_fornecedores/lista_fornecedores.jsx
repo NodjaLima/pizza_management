@@ -12,7 +12,7 @@ export default function ListaFornecedores (){
   useEffect(() => {
     axios.get("https://restaurante-api-m4.herokuapp.com/fornecedores").then((response) => {setInfo(response.data);})
         .catch((erro) => console.log(erro));
-  }, [page]);
+  }, [info]);
 
   return (
     <div className="box-lista">
@@ -41,7 +41,7 @@ export default function ListaFornecedores (){
               
                 <a id='excluir-forn' await onClick={async () => {
                   const pergunta = confirm(`Excluir fornecedor ${item.nome_fornecedor}?`)
-                  pergunta ? await deleteFornecedores(item.ramo_fornecedor).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
+                  pergunta ? await deleteFornecedores(item.id).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
                   }}><img src={excluir}></img>
                 </a>
             </tr>
