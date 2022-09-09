@@ -1,0 +1,9 @@
+.box{
+    display: flex;
+    width: 98%;
+    height: 600px;
+    background-color: transparent;
+    margin: 20px 10px 20px 10px;
+    overflow: hidden;
+}
+

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from '../pages/home/Home.jsx'
 import Header from '../components/header/Header.jsx'
-import Fornecedores from '../pages/fornecedores/fornecedores.jsx'
+import Fornecedores from '../pages/fornecedores/Fornecedores'
 import Colaboradores from '../pages/colaboradores/Colaboradores.jsx'
 import Cardapio from '../pages/cardapio/cardapio.jsx'
 import Login from '../pages/login/login.jsx'

@@ -8,6 +8,11 @@
   width: 300px;
   margin: auto;
   margin-top: 100px;
+  background: transparent;
+  border: 1.5px solid #AEC3B0;
+  box-shadow: 0 0 6px #01161E,
+  0 0 12px #124559,
+  0 0 7px #dae4e9;
 }
 
 .form_login {
