@@ -27,6 +27,10 @@ export default function Router() {
           </BrowserRouter>
           </ColaboradorProvider>
         </LoginProvider>
-    
     )
 }
+
+// CRIAR ANIMAÇÃO NA HOME;
+// MENU DA NAVBAR SUPERIOR;
+// CRIAR PÁGINA PÓS LOGIN;
+// PÁGINA PÓS LOGIN -> CRIAR MENU DE NAVEGAÇÃO ENTRE AS ENTIDADES (CARDS ETC...).
