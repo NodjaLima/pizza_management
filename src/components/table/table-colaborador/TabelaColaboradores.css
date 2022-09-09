@@ -1,6 +1,8 @@
 .container-tabela-colaboradores {
   overflow-y: auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .tabela-colaboradores{
@@ -12,6 +14,7 @@
   padding: 20px;
   background-color: #AEC3B0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
 }
 
 .tabela-colaboradores td {
@@ -22,16 +25,8 @@
   text-align: center;
 }
 
-#td-nome{
+#td-nome, #td-tel, #td-cpf{
   width: 200px;
-}
-
-#td-tel{
-  width: 150px;
-}
-
-#td-cpf{
-  width: 150px;
 }
 
 #td-end{
@@ -63,4 +58,13 @@
 
 #td-utils #td-a1:hover, #td-utils #td-a2:hover{
   border-bottom: 5px solid #AEC3B0;
+}
+
+#div-teste-table{
+  background-color: rgb(35, 137, 103);
+  max-width: 100%;
+}
+
+.tabela-table-edit{
+  width: 100%;
 }
