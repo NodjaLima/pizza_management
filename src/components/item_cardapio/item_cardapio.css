@@ -1,0 +1,21 @@
+.item-cardapio-container{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: max-content;
+  justify-content: space-between;
+}
+
+.texto-item-cardapio{
+  width: 700px;
+}
+
+.botoes-item{
+  width: 100px;
+  justify-content: space-between;
+
+}
+
+.btn-item{
+  margin: 5px;
+}
