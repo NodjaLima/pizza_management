@@ -10,6 +10,7 @@ const Menu = () => {
         <Link to='/clientes'><li>Clientes</li></Link>
         <Link to='/colaboradores'><li>Colaboradores</li></Link>
         <Link to='/fornecedores'><li>Fornecedores</li></Link>
+        <Link to='/login'><li>Login</li></Link>
       </ul>
     </div>
    );

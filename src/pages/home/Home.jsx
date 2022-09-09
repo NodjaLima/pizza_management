@@ -12,6 +12,7 @@ const Home = () => {
       <h1>{`Bem vindo ao Pizza Management, ${usuario[0].nome_colaborador}!`}</h1>
       <button type='button' onClick={(e) => {navigate('/cardapio')}}>Cardapio</button>
       <button type='button' onClick={(e) => {navigate('/colaboradores')}}>Colaboradores</button>
+      <button type='button' onClick={(e) => {navigate('/fornecedores')}}>Fornecedores</button>
 
     </div>
    );

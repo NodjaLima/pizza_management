@@ -18,7 +18,7 @@ export default function Router() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/cardapio' exact element={<Cardapio />} />
-                <Route path='/clientes' exact element={<Clientes/>} />
+                <Route path='/cliente' exact element={<Clientes/>} />
                 <Route path='/colaboradores' exact element={<Colaboradores/>} />
                 <Route path='/fornecedores' exact element={<Fornecedores />} />
                 <Route path='/login' exact element={<Login />} />
