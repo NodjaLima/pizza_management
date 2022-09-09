@@ -16,6 +16,7 @@ export const AppRoutes = () => {
 
     <Routes>
     <Route path='/' element={<Home />} />
+    {usuario.length == 1 && <Route path='/menu' exact element={<Cardapio />} />}
     {usuario.length == 1 && <Route path='/cardapio' exact element={<Cardapio />} />}
     {usuario.length == 1 && <Route path='/cliente' exact element={<Clientes/>} />}
     {usuario.length == 1 && <Route path='/colaboradores' exact element={<Colaboradores/>} />}

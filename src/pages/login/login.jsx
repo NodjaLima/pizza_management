@@ -28,7 +28,7 @@ const Login = () => {
     console.log(valor)
 
     if (isValid.length == 1) {
-      navigate('/')
+      navigate('/menu')
       setUsuario(isValid)
     } else {
       alert('usuario nao encontrado')
