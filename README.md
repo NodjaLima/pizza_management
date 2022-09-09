@@ -12,8 +12,15 @@ uma página web em ReactJs, usando os dados da [API REST](https://github.com/rne
 <div align="center">
   
 ![image](https://user-images.githubusercontent.com/100171322/189219245-cabfee1b-6edf-4327-a53d-e10332ecb138.png)
-  
+
 </div>
+  
+ 🔹 Com objetivo de suprir a necessidade de gerenciamento de pequenos negócios, Pizza Management permite que, de forma rápida e muito prática, 
+a gestão de negócios alimentícios seja facilitada e organizada.
+
+ 🔹 A aplicação permite gerenciar o que o negócio oferece como produto, por seu cardápio, que pode ser manipulado de acordo com a necessidade da loja. 
+Permite também que sua carteira de clientes esteja sempre atualizada, facilitando a busca por detalhes dos clientes. Faz ainda a gestão de fornecedores 
+e funcionários através de inclusão, edição, deleção e atualização dos itens.
 
 #
 <details>
