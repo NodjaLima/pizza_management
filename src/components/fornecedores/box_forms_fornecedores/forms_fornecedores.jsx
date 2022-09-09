@@ -22,7 +22,7 @@ export default function FormsFornecedores() {
 						<section className="section">
 						<form className="forms">
 						<h2 className="inserir">INSERIR NOVO FORNECEDOR:</h2>
-							<input type="text" placeholder="Inserir nome completo" onChange={(event) => {setUser({...user, name: event.target.value})}} />
+							<input type="text" placeholder="Inserir nome completo" onChange={(event) => {setUser({...user, nome: event.target.value})}} />
 							<input type="number" placeholder="Inserir o CNPJ" onChange={(event) => {setUser({...user, cnpj: event.target.value})}}/>
 							<input type="text/number" placeholder="Inserir endereço" onChange={(event) => {setUser({...user,endereço: event.target.value})}}/>
 							<input type="text" placeholder="Inserir ramo" onChange={(event) => {setUser({...user, ramo: event.target.value})}}/>
