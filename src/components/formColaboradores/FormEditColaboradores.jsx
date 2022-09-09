@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
-import "./FormColaboradores.css";
+import { ColaboradorContext } from "../../context/context_colaborador";
+
+import "./FormEditColaboradores.css";
 
 const FormColaboradores = (props) => {
+
+  const { matricula, setMatricula } = useContext(ColaboradorContext)
+
   const [colaborador, setColaborador] = useState({
     nome_colaborador: "",
     cpf_colaborador: "",
@@ -16,20 +21,13 @@ const FormColaboradores = (props) => {
     demissao_colaborador: "",
   });
 
-  const CadastraColaborador = () => {
-    axios
-      .post(
-        "https://restaurante-api-m4.herokuapp.com/colaboradores",
-        colaborador
-      )
-      .then((response) => {
-        setColaborador(response.data);
-      });
+  const EditaColaborador = async (matricula) => {
+    axios.put(`https://restaurante-api-m4.herokuapp.com/colaboradores/${matricula}`, colaborador)
   };
 
   return (
     <section className="section-form-colaborador">
-      <form className="form-cadastro-colaborador" id="form">
+      <form className="form-edita-colaborador" id="form">
         <input
           type="text"
           placeholder="Nome completo"
@@ -134,27 +132,25 @@ const FormColaboradores = (props) => {
           }}
         />
       </form>
-      <div className="btn-form-colaborador">
+      <div>
         <button type="reset" form="form" id="btn-reset">
           LIMPAR CAMPOS
         </button>
-        <button
-          id="btn-send"
-          onClick={(e) => {
+
+        <button id="btn-send" form="form"
+          async onClick={(e) => {
             e.preventDefault();
 
-            const pergunta = confirm(
-              `${colaborador.nome_colaborador} \n Os dados estão corretos?`
-            );
+            const pergunta = confirm(`${colaborador.nome_colaborador} \n Os dados estão corretos?`);
 
             if (pergunta) {
               alert(`Colaborador cadastrado com sucesso.`);
-              CadastraColaborador(colaborador);
+              EditaColaborador(matricula, colaborador);
             }
           }}
-          form="form"
+          
         >
-          CADASTRAR
+          SALVAR ALTERAÇÕES
         </button>
       </div>
     </section>
