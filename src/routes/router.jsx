@@ -6,12 +6,14 @@ import Colaboradores from '../pages/colaboradores/Colaboradores.jsx'
 import Cardapio from '../pages/cardapio/cardapio.jsx'
 import Login from '../pages/login/login.jsx'
 import { LoginProvider } from '../context/context_login.jsx'
+import { ColaboradorProvider } from '../context/context_colaborador.jsx'
 
 
 export default function Router() {
 
     return (
         <LoginProvider>
+          <ColaboradorProvider>
           <BrowserRouter>
             <Header />
               <Routes>
@@ -23,6 +25,7 @@ export default function Router() {
                 <Route path='/login' exact element={<Login />} />
               </Routes>
           </BrowserRouter>
+          </ColaboradorProvider>
         </LoginProvider>
     
     )
