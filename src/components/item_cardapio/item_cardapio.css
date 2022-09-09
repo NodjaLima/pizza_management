@@ -1,0 +1,33 @@
+.item-cardapio-container{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: max-content;
+  justify-content: space-between;
+}
+
+.texto-item-cardapio{
+  width: 700px;
+}
+
+.botoes-item{
+  width: 100px;
+  justify-content: space-between;
+}
+
+.btn-item{
+  width: 100%;
+  background-color:#01161E;
+  color: white;
+  border-radius: 12px;
+  height: 30px;
+  border: none;
+  transition-duration: 0.4s;
+  margin: 2px;
+}
+
+.btn-item:hover{
+  background-color: #AEC3B0;
+  cursor:pointer;
+  color: #124559;
+}

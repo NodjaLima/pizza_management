@@ -1,0 +1,14 @@
+.editar_btn{
+  width: 30%;
+  background-color: #01161E;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  height: 40px;
+  transition-duration: 0.4s;
+}
+
+.editar_btn:hover{
+  background-color: #AEC3B0;
+  cursor:pointer;
+}

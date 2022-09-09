@@ -1,11 +1,34 @@
 .cardapio-container{
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 45% 45%;
-}
-
-.cardapio-inserir{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 20px;
 }
+
+.cardapio-botoes{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px;
+  width: 50vw;
+}
+
+.btn{
+  width: 100%;
+  background-color: #01161E;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  height: 40px;
+  transition-duration: 0.4s;
+}
+
+.btn:hover{
+  background-color: #AEC3B0;
+  cursor:pointer;
+  color: #124559;
+}
+
+
 
