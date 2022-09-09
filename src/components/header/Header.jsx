@@ -11,17 +11,12 @@ export default function Header() {
             <img src="/src/assets/img/logo.png"></img>
         </div>
         <div className="links-menu">  
-            <div className="link" onClick={() => navegate("/cardapio")}>
-               CARDAPIO
+            <div className="link" onClick={() => navegate("/sobre")}>
+               Sobre
             </div>
-            <div className="link" onClick={() => navegate("/cliente")}>
-               CLIENTE
-            </div>
-            <div className="link"onClick={() => navegate("/colaboradores")}>
-               COLABORADORES
-            </div>
-            <div className="link"onClick={() => navegate("/fornecedores")}>
-               FORNECEDORES
+            
+            <div className="link"onClick={() => navegate("/")}>
+               Login
             </div>
         </div>
       </div>
