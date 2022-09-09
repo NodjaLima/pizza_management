@@ -1,5 +1,5 @@
 import MenuLateral from "../../components/menu/MenuLateral"
-import TabelaColaboradores from "../../components/table/table-colaborador/TableColaborador";
+import {TabelaColaboradores} from "../../components/table/table-colaborador/TableColaborador";
 import FormColaboradores from "../../components/formColaboradores/FormColaboradores";
 import { useState } from "react";
 import './Colaboradores.css';
