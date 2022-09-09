@@ -30,7 +30,7 @@ uma página web em ReactJs, usando os dados da [API REST](https://github.com/rne
 2. [x] Utilizar o README.md do repositório para documentação do projeto;
 3. [x] Utilizar a biblioteca react-router-dom para roteamento das páginas;
 4. [x] Utilizar CSS Grid para definição do layout das páginas;
-5. [ ] Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
+5. [x] Tenha uma animação CSS para carregamento inicial do site(sem biblioteca).
 6. [x] Contenha as funcionalidades básicas do CRUD:
 7. [x] Página para listar os cadastros com opção de busca;
 8. [x] Página para incluir um novo registro;
@@ -60,6 +60,18 @@ uma página web em ReactJs, usando os dados da [API REST](https://github.com/rne
  ```
   
 <div align='center'>  
+
+## Login:
+
+Para acessar o site e as funcionalidades das entidades, é preciso realizar o login em nossa aplicação. 
+A base de cadastros que possuem acesso ao site é a base de Colaboradores, onde o id_colaborador é usado para preencher o campo "Usuário" e o cpf_colaborador deve ser usado no campo "Senha".
+É possível ver no console de desenvolvimento os colaboradores cadastrados. Todos eles tem acesso as funcionalidades da aplicação.
+
+## CRUD de entidades
+
+Essa aplicação trabalha com as entidades Cardapio, Clientes, Colaboradores e Fornecedores. 
+Dentro das funcionalidades de cada entidade, é possível realizar cadastro, deletar, editar e listar os itens que estão no banco de dados.
+Todas as requisições devem respeitas as exigencias da API que está sendo consumida. Para mais informações a respeito, visite o repositório da API em https://github.com/rnegrelly/Projeto-M4-API_REST.
   
  ## Status do Projeto
 ![Bagde](https://img.shields.io/badge/Status%20do%20Projeto-Concluído-blue)
