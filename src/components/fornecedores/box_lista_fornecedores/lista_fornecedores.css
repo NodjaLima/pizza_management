@@ -11,7 +11,7 @@
     text-align: center;
     border: 2px solid #AEC3B0;
     box-shadow: 0 0 10px #01161E,
-    0 0 10px #AEC3B0,
+    0 0 10px #dae4e9,
     0 0 15px #01161E;
  
   }
@@ -23,13 +23,12 @@
   .lista2 th{
     border-collapse: separate;
     padding: 20px;
-    background-color: transparent
   }
   
   .lista2 td {
     width: auto;
     padding: 20px 0;
-    background-color: #eff6e0;
+    color:#eff6e0;
     text-align: center;
   }
   
