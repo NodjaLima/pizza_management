@@ -13,7 +13,7 @@ const Deletaclientes = () => {
     useEffect(() =>{
         axios.get('https://restaurante-api-m4.herokuapp.com/clientes')
         .then(response => {
-            // console.log(response.data)
+            
             setOptions(response.data)
         } )
 
@@ -29,22 +29,13 @@ const Deletaclientes = () => {
 
         const infocliente = options.filter((item) =>{
             return item.id_cliente === Number(event.target.value)
-            // console.log(idCliente)
+            
         })
         
         setDadosCliente(infocliente)
         
     }
-
-    console.log(dadosCliente)
     
-    // const infocliente = options.filter((item) =>{
-    //     item.id_cliente === Number(idCliente)
-    //     console.log(idCliente)
-    // })
-
-    
-
     //bloco apara deletar o cliente referente ao id selecionado
     function onclick(event){
         event.preventDefault()

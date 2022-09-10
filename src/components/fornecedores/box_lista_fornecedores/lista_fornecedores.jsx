@@ -41,7 +41,9 @@ export default function ListaFornecedores (){
               
                 <a id='excluir-forn' await onClick={async () => {
                   const pergunta = confirm(`Excluir fornecedor ${item.nome_fornecedor}?`)
-                  pergunta ? await deleteFornecedores(item.id_fornecedor).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
+
+                  pergunta ? await deleteFornecedores(item.id).then(alert('Fornecedor excluído!')) : alert('Cancelado!')
+
                   }}><img src={excluir}></img>
                 </a>
             </tr>
