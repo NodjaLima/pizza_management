@@ -76,7 +76,9 @@ A base de cadastros que possuem acesso ao site é a base de Colaboradores, onde 
 
 Caso não haja nenhum cadastro devido ao reset da API, por favor, utilize o POSTMAN ou INSOMNIA para realizar uma requisição POST, passando o objeto abaixo:
 
-```{
+Link da requisição: https://restaurante-api-m4.herokuapp.com/colaboradores
+
+{
     "nome_colaborador": "Andressa Ricardo de Amorim",
     "cpf_colaborador": "12345",
     "endereco_colaborador": "Av. Edgard Romero nº 87, Madureira, Rio de Janeiro - RJ",
@@ -87,7 +89,7 @@ Caso não haja nenhum cadastro devido ao reset da API, por favor, utilize o POST
     "salario_colaborador": "R$ 2.165,30",
     "admissao_colaborador": "13/07/2019",
     "demissao_colaborador": "null"
-    }```
+    }
 
 O campo usuário deverá ser preenchido com '1' e o campo senha com o cpf cadastrado, que no exemplo acima é '12345'.
 
@@ -98,6 +100,7 @@ Após o sucesso do login, as rotas estarão livres para navegação.
 
 Essa aplicação trabalha com as entidades Cardapio, Clientes, Colaboradores e Fornecedores. 
 Dentro das funcionalidades de cada entidade, é possível realizar cadastro, deletar, editar e listar os itens que estão no banco de dados.
+A entidade Cardapio aprensenta todo o CRUD, nem como a busca por Sabor e Categoria.
 Todas as requisições devem respeitas as exigencias da API que está sendo consumida. Para mais informações a respeito, visite o repositório da API em https://github.com/rnegrelly/Projeto-M4-API_REST.
   
  ## Status do Projeto
