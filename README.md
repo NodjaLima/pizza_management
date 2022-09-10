@@ -67,6 +67,26 @@ Para acessar o site e as funcionalidades das entidades, é preciso realizar o lo
 A base de cadastros que possuem acesso ao site é a base de Colaboradores, onde o id_colaborador é usado para preencher o campo "Usuário" e o cpf_colaborador deve ser usado no campo "Senha".
 É possível ver no console de desenvolvimento os colaboradores cadastrados. Todos eles tem acesso as funcionalidades da aplicação.
 
+Caso não haja nenhum cadastro devido ao reset da API, por favor, utilize o POSTMAN ou INSOMNIA para realizar uma requisição POST, passando o objeto abaixo:
+
+```{
+    "nome_colaborador": "Andressa Ricardo de Amorim",
+    "cpf_colaborador": "12345",
+    "endereco_colaborador": "Av. Edgard Romero nº 87, Madureira, Rio de Janeiro - RJ",
+    "cargo_colaborador": "Administrador contábil",
+    "email_colaborador": "homerolinspaiva81@oi.com.br",
+    "telefone_colaborador": "(21)98416-2188",
+    "turno_colaborador": "Noite",
+    "salario_colaborador": "R$ 2.165,30",
+    "admissao_colaborador": "13/07/2019",
+    "demissao_colaborador": "null"
+    }```
+
+O campo usuário deverá ser preenchido com '1' e o campo senha com o cpf cadastrado, que no exemplo acima é '12345'.
+
+Após o sucesso do login, as rotas estarão livres para navegação.
+
+
 ## CRUD de entidades
 
 Essa aplicação trabalha com as entidades Cardapio, Clientes, Colaboradores e Fornecedores. 
