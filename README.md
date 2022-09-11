@@ -100,8 +100,18 @@ Após o sucesso do login, as rotas estarão livres para navegação.
 
 Essa aplicação trabalha com as entidades Cardapio, Clientes, Colaboradores e Fornecedores. 
 Dentro das funcionalidades de cada entidade, é possível realizar cadastro, deletar, editar e listar os itens que estão no banco de dados.
-A entidade Cardapio aprensenta todo o CRUD, nem como a busca por Sabor e Categoria.
+A entidade Cardapio aprensenta todo o CRUD, bem como a busca por Sabor e Categoria.
 Todas as requisições devem respeitas as exigencias da API que está sendo consumida. Para mais informações a respeito, visite o repositório da API em https://github.com/rnegrelly/Projeto-M4-API_REST.
+
+A entidade Cardapio, possui em seu formulário de cadastro, os campos: Categoria, Sabor, Ingredientes, Tamanho e Preço. Para que novos itens sejam inseridos, é preciso respeitar as validações abaixo:
+
+- O valor correspondente a chave "categoria_cardapio" deve estar contido na lista ['Bebida', 'Pizza Salgada', 'Pizza Doce'];
+- O valor correspondente a chave "sabor_cardapio" deve ser uma string e não pode estar vazia;
+- O valor correspondente a chave "ingredientes_cardapio" deve ser uma string e não pode estar vazia;
+- O valor correspondente a chave "tamanho_cardapio" deve estar contido na lista ['Brotinho', 'Média', 'Grande', 'Família', 'Lata', "1 litro", '2 litros', '400ml',];
+- O valor correspondente a chave "valor_cardapio" deve ser um dado do tipo string que utilize os caracteres da lista '0123456789.,R$', espaços não são permitidos;
+- Case-sensitive.
+
   
  ## Status do Projeto
 ![Bagde](https://img.shields.io/badge/Status%20do%20Projeto-Concluído-blue)
